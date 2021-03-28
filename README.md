@@ -6,22 +6,55 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Project creation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+First, you must install Angular CLI for build/work Angular projects.
 
-## Build
+```bash
+npm i -g @angular/cli
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Then, you can run the `ng new <project name>` for project creations.
 
-## Running unit tests
+``` bash
+ng new angular-tutorial
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Add project to Github Repository
 
-## Running end-to-end tests
+Before add this code to your Github repo. You must init and run an initial commit of code.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```bash
+git init
+git status
+git add .
+git commit -m "Initial commit"
+```
 
-## Further help
+Next, On github, create a repository and use the url in the next code lines:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+git remote add origin <url of github repository>
+git push origin 
+```
+
+Finally you can see your updated repository on Github.
+
+
+## Project dependences
+
+[Angular Material](https://material.angular.io/)
+
+```bash
+ng add @angular/material
+```
+
+This command ask you about typography and Animations. select Y in both questions. <br/>
+Finally, you can use any theme of your preference.
+
+[Angular Flez Layout](https://github.com/angular/flex-layout)
+
+```bash
+npm i -s @angular/flex-layout @angular/cdk
+
+```
