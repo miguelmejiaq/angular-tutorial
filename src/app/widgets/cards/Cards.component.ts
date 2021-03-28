@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'widget-cards',
-    templateUrl: './Cards.component.html',
-    styleUrls : ['./Cards.component.scss']
+    templateUrl: './cards.component.html',
+    styleUrls : ['./cards.component.scss']
 })
-export class Cards implements OnInit{
+export class CardsWidget implements OnInit{
     ngOnInit(){}
 }
