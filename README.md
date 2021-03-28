@@ -52,7 +52,7 @@ ng add @angular/material
 This command ask you about typography and Animations. select Y in both questions. <br/>
 Finally, you can use any theme of your preference.
 
-[Angular Flez Layout](https://github.com/angular/flex-layout)
+[Angular Flex Layout](https://github.com/angular/flex-layout)
 
 ```bash
 npm i -s @angular/flex-layout @angular/cdk
