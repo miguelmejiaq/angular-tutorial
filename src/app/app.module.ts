@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -14,7 +15,10 @@ import { MatCardModule  } from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
+import { routes } from './routes/tutorialRouter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +36,11 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSidenavModule,
+    MatListModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes, {enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
