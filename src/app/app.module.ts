@@ -19,13 +19,16 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 
 import { routes } from './routes/tutorialRouter';
+import { NotFoundComponent } from './views/notFound/notFound.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CardsWidget,
     CardComponent,
     FabButtonComponent,
-    TextBoxComponent
+    TextBoxComponent,
+    NotFoundComponent
   ],
   imports: [
     ReactiveFormsModule,

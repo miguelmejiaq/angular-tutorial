@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'To do List';
-  sidenavOptions = [
-    {name: "Home", icon: "home", router:"home"}
-  ]
+  sidenavOptions = [];
+  ngOnInit(){
+    this.sidenavOptions = [
+      {name: "Home", icon: "home", router:"home"}
+    ]
+  }
 }
