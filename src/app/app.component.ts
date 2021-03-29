@@ -10,7 +10,10 @@ export class AppComponent implements OnInit{
   sidenavOptions = [];
   ngOnInit(){
     this.sidenavOptions = [
-      {name: "Home", icon: "home", router:"home"}
+      { name: "Home", icon: "home", router:"home" },
+      { name: "To do List", icon: "list", router:"to-do"},
+      { name: "Calculator", icon: "calculate", router: "calculator"},
+      { name: "Tabs", icon: "tab", router: "tabs"}
     ]
   }
 }

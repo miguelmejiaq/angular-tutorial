@@ -4,10 +4,6 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { CardsWidget } from './widgets/cards/cards.component';
-import { CardComponent } from './components/card/card.component';
-import { FabButtonComponent } from './components/fab-button/fabButton.component';
-import { TextBoxComponent } from './components/text-box/textbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,16 +15,23 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 
 import { routes } from './routes/tutorialRouter';
+import { CardsWidget } from './widgets/cards/cards.component';
+import { CardComponent } from './components/card/card.component';
+import { FabButtonComponent } from './components/fab-button/fabButton.component';
+import { TextBoxComponent } from './components/text-box/textbox.component';
 import { NotFoundComponent } from './views/notFound/notFound.component';
+import { HomeView } from './views/home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
+    HomeView,
     CardsWidget,
     CardComponent,
     FabButtonComponent,
     TextBoxComponent,
-    NotFoundComponent
   ],
   imports: [
     ReactiveFormsModule,
