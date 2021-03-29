@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="mat-elevation-z6">
+<mat-toolbar color="primary" [class.mat-elevation-z6]=true class="sticky-toolbar">
   <button mat-icon-button (click)="snav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
@@ -15,7 +15,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="bounds ng-star-inserted app-content">
-      <div class="container-fluid">
+      <div class="container">
         <router-outlet></router-outlet>
       </div>
     </div>
