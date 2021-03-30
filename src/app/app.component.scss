@@ -1,0 +1,16 @@
+.sticky-toolbar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+}
+.app-content{
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+}
+.tutorial-sidenav{
+    min-width: 300px;
+}
+h1.tutorial-app-name {
+        margin-left: 8px;
+}
