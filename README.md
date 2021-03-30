@@ -59,4 +59,10 @@ npm i -s @angular/flex-layout @angular/cdk
 
 ```
 
-## 
+[ngrx](https://ngrx.io/)
+
+```bash
+npm i -s @ngrx/store 
+```
+
+ 
