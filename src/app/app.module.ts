@@ -26,6 +26,7 @@ import { HomeView } from './views/home/home.component';
 import { StoreModule } from '@ngrx/store';
 import { selectWithIconReducer } from './store/selectWithIcon/selectWithIcon.reducer';
 import { AddCards } from './widgets/addCards/AddCards.component';
+import { CardsReducer } from './store/cards/cards.reducer';
 
 @NgModule({
   declarations: [
@@ -51,10 +52,11 @@ import { AddCards } from './widgets/addCards/AddCards.component';
     MatListModule,
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes, {enableTracing: true}),
+    RouterModule.forRoot(routes, {enableTracing: false}),
     StoreModule.forRoot(
       { 
-        selectWithIcons: selectWithIconReducer
+        selectWithIcons: selectWithIconReducer,
+        cards: CardsReducer
       }
     )
   ],

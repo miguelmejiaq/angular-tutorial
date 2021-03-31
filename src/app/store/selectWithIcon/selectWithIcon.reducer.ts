@@ -3,7 +3,7 @@ import * as selectActions from './selectWithIcon.actions';
 
 const initialState: selectWithIcon[]= [];
 
-export function selectWithIconReducer( state: selectWithIcon[] = initialState, action: selectActions.SelectWithIconActions){
+export function selectWithIconReducer( state: selectWithIcon[] = initialState, action: selectActions.Actions){
     switch(action.type){
         case selectActions.LIST_OPTIONS :
             return [
