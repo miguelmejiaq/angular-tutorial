@@ -27,6 +27,7 @@ import { StoreModule } from '@ngrx/store';
 import { selectWithIconReducer } from './store/selectWithIcon/selectWithIcon.reducer';
 import { AddCards } from './widgets/addCards/AddCards.component';
 import { CardsReducer } from './store/cards/cards.reducer';
+import { TextAreaComponent } from './components/text-area/textarea.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CardsReducer } from './store/cards/cards.reducer';
     CardComponent,
     FabButtonComponent,
     TextBoxComponent,
+    TextAreaComponent,
     CardsWidget,
     AddCards
   ],

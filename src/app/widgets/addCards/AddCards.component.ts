@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { selectWithIcon } from 'src/app/models/selectWithIcon.model';
@@ -11,11 +12,24 @@ import AppState from './../../app.state';
     styleUrls: ['./AddCards.component.scss']
 })
 export class AddCards implements OnInit {
-    selectWithIconList : Observable<selectWithIcon[]>;
-    constructor(private store: Store<AppState>){
+    selectWithIconList: Observable<selectWithIcon[]>;
+    @Input() store: Store<AppState>;
+    cardForm: FormGroup;
+    constructor(private formBuilder: FormBuilder) {
+        this.cardForm = this.formBuilder.group(
+            {
+                icon: [, [Validators.required]],
+                title: [, [Validators.required]],
+                subtitle: [, [Validators.required]],
+                description: [, [Validators.required]]
+            }
+        );
     }
-    ngOnInit(): void{
+    ngOnInit(): void {
         this.selectWithIconList = this.store.select(select => select.selectWithIcons);
         this.store.dispatch(new SelectWithIconActions());
+    }
+    AddCard() {
+        console.log(this.cardForm.value);
     }
 }

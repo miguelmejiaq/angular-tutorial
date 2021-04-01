@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { card } from 'src/app/models/card.model';
@@ -12,7 +12,8 @@ import AppState from 'src/app/app.state';
 })
 export class CardsWidget implements OnInit{
     cards: Observable<card[]>;
-    constructor(private store: Store<AppState>){
+    @Input()store:Store<AppState>;
+    constructor(){
     }
     ngOnInit(): void{
         this.cards = this.store.select(select => select.cards);

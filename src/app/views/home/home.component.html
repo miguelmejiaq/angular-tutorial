@@ -1,3 +1,4 @@
 <div>
-    <widget-cards></widget-cards>
+    <add-card-form [store]="store"></add-card-form>
+    <widget-cards *ngIf="store" [store]="store"></widget-cards>
 </div>

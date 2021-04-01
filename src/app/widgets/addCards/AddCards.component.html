@@ -1,3 +1,5 @@
-<p *ngIf="(selectWithIconList|async)?.length">
-    {{ (selectWithIconList|async).length }}
-</p>
+<form [formGroup]="cardForm" (ngSubmit)="AddCard()">
+    <tutorial-text-box [control]="cardForm.controls['title']" name="Title"></tutorial-text-box>
+    <tutorial-text-box [control]="cardForm.controls['subtitle']" name="Subtitle"></tutorial-text-box>
+    <tutorial-text-area [control]="cardForm.controls['description']" name="Description"></tutorial-text-area>
+</form>
