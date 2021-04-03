@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { routes } from './routes/tutorialRouter';
 import { CardsWidget } from './widgets/cards/cards.component';
@@ -52,6 +53,7 @@ import { TextAreaComponent } from './components/text-area/textarea.component';
     MatFormFieldModule,
     MatSidenavModule,
     MatListModule,
+    MatDialogModule,
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes, {enableTracing: false}),

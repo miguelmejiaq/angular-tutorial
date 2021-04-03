@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
     selector: 'tutorial-fab-button',
@@ -6,5 +6,8 @@ import {Component} from '@angular/core';
     styleUrls: ['./fabButton.component.scss']
 })
 export class FabButtonComponent{
-
+  @Output() clickButton = new EventEmitter ;  
+  OnClickButton(){
+      this.clickButton.emit();
+  }
 }

@@ -1,7 +1,9 @@
-<mat-form-field>
-  <mat-label>{{name}}</mat-label>
-  <textarea matInput [formControl]="control"></textarea>
-  <mat-error *ngIf="control.hasError('required')">
-    {{name}} is <strong>required</strong>
-  </mat-error>
-</mat-form-field>
+<p>
+  <mat-form-field>
+    <mat-label>{{name}}</mat-label>
+    <textarea matInput [formControl]="control"></textarea>
+    <mat-error *ngIf="control.hasError('required')">
+      {{name}} is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</p>

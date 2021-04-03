@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { selectWithIcon } from 'src/app/models/selectWithIcon.model';
@@ -13,9 +14,10 @@ import AppState from './../../app.state';
 })
 export class AddCards implements OnInit {
     selectWithIconList: Observable<selectWithIcon[]>;
-    @Input() store: Store<AppState>;
+    store: Store<AppState>;
     cardForm: FormGroup;
-    constructor(private formBuilder: FormBuilder) {
+    action: string;
+    constructor(private formBuilder: FormBuilder, public dialogRef: MatDialogRef<AddCards>,@Inject(MAT_DIALOG_DATA) public data) {
         this.cardForm = this.formBuilder.group(
             {
                 icon: [, [Validators.required]],
@@ -24,6 +26,11 @@ export class AddCards implements OnInit {
                 description: [, [Validators.required]]
             }
         );
+        this.store = this.data.store;
+        this.action = this.data.action;
+        if (!this.data.card){
+            this.cardForm.reset();
+        }
     }
     ngOnInit(): void {
         this.selectWithIconList = this.store.select(select => select.selectWithIcons);

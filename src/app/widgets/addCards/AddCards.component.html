@@ -1,5 +1,8 @@
-<form [formGroup]="cardForm" (ngSubmit)="AddCard()">
-    <tutorial-text-box [control]="cardForm.controls['title']" name="Title"></tutorial-text-box>
-    <tutorial-text-box [control]="cardForm.controls['subtitle']" name="Subtitle"></tutorial-text-box>
-    <tutorial-text-area [control]="cardForm.controls['description']" name="Description"></tutorial-text-area>
-</form>
+<h1 mat-dialog-title>{{action}} Card</h1>
+<div mat-dialog-content>
+    <form [formGroup]="cardForm" (ngSubmit)="AddCard()">
+        <tutorial-text-box [control]="cardForm.controls['title']" name="Title"></tutorial-text-box>
+        <tutorial-text-box [control]="cardForm.controls['subtitle']" name="Subtitle"></tutorial-text-box>
+        <tutorial-text-area [control]="cardForm.controls['description']" name="Description"></tutorial-text-area>
+    </form>
+</div>
