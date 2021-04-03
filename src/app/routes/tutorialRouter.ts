@@ -9,6 +9,10 @@ export const routes : Routes = [
         component: HomeView
     },
     {
+        path: "to-do",
+        component: HomeView
+    },
+    {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'

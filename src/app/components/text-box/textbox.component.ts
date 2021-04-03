@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -7,5 +7,6 @@ import { FormControl } from '@angular/forms';
     styleUrls: ['./textbox.component.scss']
 })
 export class TextBoxComponent{
-    value = new FormControl('', { updateOn: 'blur' });
+    @Input()control: FormControl;
+    @Input()name: String; 
 }
